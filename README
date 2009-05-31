@@ -1,0 +1,18 @@
+﻿
+'anewex' is a tool to send trackback-ping to ping-servers.
+
+Default target ping-servers:
+    weblogs.com
+    ping.bloggers.jp
+    BlogPeople
+    Drecom RSS
+    technorati
+    bulkfeeds
+    goo BLOG
+    Google blog search
+
+
+xmlRPC libraries are necessary for building this application.
+
+  xmlRPC: 
+    http://github.com/tsupo/xmlRPC/tree

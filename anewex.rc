@@ -1,0 +1,789 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\anewex.rc2""  // Microsoft Visual C++ 以外のツールで編集されたリソース\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のコンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\anewex.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 234, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "update ping 送信ツール"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,21
+    LTEXT           "anewex Version 1.43",IDC_ANEWEX_VERSION,40,10,61,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 by tsupo",
+                    IDC_STATIC,44,25,172,8
+    LTEXT           "http://watcher.moe-nifty.com/",IDC_ANEWEX_WEB_URL,48,37,
+                    90,8,SS_NOTIFY
+    DEFPUSHBUTTON   "OK",IDOK,177,7,50,14,WS_GROUP
+    LTEXT           "OpenSSL: ",IDC_OPENSSL,56,50,140,8
+    LTEXT           "iconv: ",IDC_ICONV,56,60,140,8
+END
+
+IDD_ANEWEX_DIALOG DIALOGEX 0, 0, 255, 321
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "update ping 送信ツール"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    LTEXT           "Blog を選択",IDC_BLOG,7,7,36,8
+    COMBOBOX        IDC_COMBO,12,17,183,80,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "PING 送信先",IDC_PINGSITELIST,13,37,181,277
+    CONTROL         "http://rpc.weblogs.com/RPC2",IDC_RADIO_WEBLOGSCOM,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,19,47,102,10
+    CONTROL         "http://ping.bloggers.jp/rpc/",IDC_RADIO_BLOGGERSJP,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,19,59,95,10
+    CONTROL         "http://www.blogpeople.net/servlet/weblogUpdates",
+                    IDC_RADIO_BLOGPEOPLE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,19,71,162,10
+    CONTROL         "http://ping.rss.drecom.jp/",IDC_RADIO_MYBLOG,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,19,83,90,10
+    CONTROL         "http://rpc.technorati.com/rpc/ping",
+                    IDC_RADIO_TECHNORATI,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,19,95,116,10
+    CONTROL         "http://bulkfeeds.net/rpc",IDC_RADIO_BULKFEEDS,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,19,107,86,10
+    CONTROL         "http://blog.goo.ne.jp/XMLRPC",IDC_RADIO_GOO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,19,119,102,10
+    CONTROL         "http://blogsearch.google.com/ping/RPC2",
+                    IDC_RADIO_GOOGLE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    19,131,135,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_001,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,143,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_002,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,155,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_003,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,167,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_004,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,179,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_005,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,191,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_006,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,203,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_007,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,215,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_008,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,227,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_009,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,239,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_010,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,251,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_011,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,263,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_012,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,275,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_013,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,287,174,10
+    CONTROL         "(未設定)",IDC_RADIO_PINGSITE_014,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,299,174,10
+    PUSHBUTTON      "Ping 送信先追加",IDC_ADD_PINGSITE,135,45,55,22
+    PUSHBUTTON      "PING 送信",IDC_PING,199,15,49,17
+    PUSHBUTTON      "設定",IDC_SETTING,199,42,49,17
+    PUSHBUTTON      "バージョン情報",IDC_VERSION,199,62,49,17
+    DEFPUSHBUTTON   "終了",IDOK,199,82,49,17
+    CONTROL         "proxy を使う",IDC_CHECKPROXY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,197,283,51,10
+    PUSHBUTTON      "proxy 設定",IDC_BUTTONPROXY,197,297,51,17
+END
+
+IDD_DIALOG_BLOGSETING DIALOG DISCARDABLE  0, 0, 279, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Blog 設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "Blog 名",IDC_STATIC,7,7,23,8
+    EDITTEXT        IDC_EDIT_BLOGNAME,13,19,197,16,ES_AUTOHSCROLL
+    LTEXT           "Blog の URL",IDC_STATIC,7,41,38,8
+    EDITTEXT        IDC_EDIT_BLOGURL,13,53,197,16,ES_AUTOHSCROLL
+    LTEXT           "フィード(RSS または Atom) の URL",IDC_STATIC,7,75,103,8
+    EDITTEXT        IDC_EDIT_FEEDURL,13,87,197,16,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,222,7,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,222,24,50,14
+    PUSHBUTTON      "一覧",IDC_BUTTON_BLOGLIST,222,90,50,14
+END
+
+IDD_DIALOG_BLOGLIST DIALOG DISCARDABLE  0, 0, 207, 167
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Blog 一覧"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,151,7,49,16
+    PUSHBUTTON      "キャンセル",IDCANCEL,151,24,49,16
+    LISTBOX         IDC_LIST_BLOGS,7,7,134,150,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "追加",IDC_APPEND_BLOG,151,57,49,16
+    PUSHBUTTON      "削除",IDC_DELETE_BLOG,151,74,49,16
+END
+
+IDD_DIALOG_INPUT_PINGSITE DIALOG DISCARDABLE  0, 0, 245, 125
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ping 送信先の追加"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "Ping 送信先 URL",IDC_STATIC,7,7,51,8
+    EDITTEXT        IDC_EDIT_PINGSITE_URL,13,20,219,14,ES_AUTOHSCROLL
+    LTEXT           "Ping 送信先名称 (覚えやすいと思う名前なら何でも OK)",
+                    IDC_STATIC,7,39,162,8
+    EDITTEXT        IDC_EDIT_PINGSITE_NAME,13,52,219,14,ES_AUTOHSCROLL
+    GROUPBOX        "Ping 種別",IDC_STATIC,7,71,156,47,WS_GROUP
+    CONTROL         "weblogUpdates.ping (通常は、こちら)",
+                    IDC_RADIO_PINGTYPE_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,22,84,122,10
+    CONTROL         "weblogUpdates.extendedPing",IDC_RADIO_PINGTYPE_EXTENDED,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,22,100,100,10
+    DEFPUSHBUTTON   "OK",IDOK,188,87,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,188,104,50,14
+END
+
+IDD_DIALOG_PROXYSETTING DIALOG DISCARDABLE  0, 0, 187, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "proxy の設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "proxy サーバ名 または アドレス",IDC_STATIC,7,7,94,8
+    EDITTEXT        IDC_EDIT_PROXYURL,7,17,173,14,ES_AUTOHSCROLL
+    LTEXT           "proxyサーバのポート番号",IDC_STATIC,7,41,76,8
+    EDITTEXT        IDC_EDIT_PROXYPORT,7,51,173,14,ES_AUTOHSCROLL
+    LTEXT           "proxyサーバのユーザ名 (必要な場合のみ)",IDC_STATIC,7,75,
+                    126,8
+    EDITTEXT        IDC_EDIT_PROXYUSERNAME,7,85,173,14,ES_AUTOHSCROLL
+    LTEXT           "proxyサーバのパスワード (必要な場合のみ)",IDC_STATIC,7,
+                    109,130,8
+    EDITTEXT        IDC_EDIT_PROXYPASSWORD,7,119,173,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,39,143,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,99,143,50,14
+END
+
+IDD_DIALOG_SENDING DIALOG DISCARDABLE  0, 0, 108, 37
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "ping 送信中"
+FONT 14, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "ping 送信中 ……",IDC_STATIC_PROCEEDING,27,14,57,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,3,12
+ PRODUCTVERSION 1,0,3,12
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "Project ANEW\0"
+            VALUE "CompanyName", "観測気球 http://watcher.moe-nifty.com/\0"
+            VALUE "FileDescription", "anewex: blog 関連ツール (更新ping送信プログラム)\0"
+            VALUE "FileVersion", "1, 0, 3, 12\0"
+            VALUE "InternalName", "anewex\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 by tsupo\0"
+            VALUE "LegalTrademarks", "Anew Not Equal WWIV\0"
+            VALUE "OriginalFilename", "anewex.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "anewex ツール\0"
+            VALUE "ProductVersion", "1, 0, 3, 12\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_ANEWEX_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 314
+    END
+
+    IDD_DIALOG_BLOGSETING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_DIALOG_BLOGLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_DIALOG_INPUT_PINGSITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_DIALOG_PROXYSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_DIALOG_SENDING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 101
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 30
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND2               CURSOR  DISCARDABLE     "res\\cur00001.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "anewex のバージョン情報(&A)..."
+    IDS_ANEWEX_WEB_URL      "http://watcher.moe-nifty.com/memo/2004/09/anewex.html"
+    IDS_EDIT_PING_SITE      "Ping 送信先の編集"
+    IDS_EDIT_BLOG_INFO      "Blog 設定変更"
+    IDS_ADD_BLOG_INFO       "Blog 追加"
+    IDS_SENDING_PING        "ping 送信中 ……"
+    IDS_SENT_PING           "ping 送信"
+    IDS_RECORDING_RESULT    "送信結果反映中 ……"
+    IDS_RESULT              "ping 送信結果"
+    IDS_NO_PINGSITE         "ping 送信する必要のあるサイトは見つかりませんでした。  "
+    IDS_WRITE_FAILURE       "初期設定ファイル書出し失敗"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CREATE_FAILURE      "初期設定ファイルの作成に失敗しました    "
+    IDS_UPDATE_FAILURE      "初期設定ファイルの更新に失敗しました    "
+    IDS_USE_PROXY           "proxy を使用しますか ?    "
+    IDS_QUERY_PROXY         "proxy 設定問い合わせ"
+    IDS_SITENAME_001        "weblogs.com"
+    IDS_SITEURL_001         "http://rpc.weblogs.com/RPC2"
+    IDS_SITENAME_002        "ping.bloggers.jp"
+    IDS_SITEURL_002         "http://ping.bloggers.jp/rpc/"
+    IDS_SITENAME_003        "BlogPeople"
+    IDS_SITEURL_003         "http://www.blogpeople.net/servlet/weblogUpdates"
+    IDS_SITENAME_004        "ドリコムRSS"
+    IDS_SITEURL_004         "http://ping.rss.drecom.jp/"
+    IDS_SITENAME_005        "technorati"
+    IDS_SITEURL_005         "http://rpc.technorati.com/rpc/ping"
+    IDS_SITENAME_006        "bulkfeeds"
+    IDS_SITEURL_006         "http://bulkfeeds.net/rpc"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SITENAME_007        "goo BLOG"
+    IDS_SITEURL_007         "http://blog.goo.ne.jp/XMLRPC"
+    IDS_SITENAME_008        "Google ブログ検索"
+    IDS_SITEURL_008         "http://blogsearch.google.com/ping/RPC2"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ANEWEX_VERSION      "1.50"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (ｱﾒﾘｶ) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_SENDING DIALOG DISCARDABLE  0, 0, 108, 37
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Sending ..."
+FONT 10, "Times New Roman"
+BEGIN
+    LTEXT           "Sending ping ...",IDC_STATIC_PROCEEDING,27,14,65,8
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 230, 78
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "anewex - a tool to send update pings"
+FONT 10, "Times New Roman"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "anewex Version 1.43",IDC_ANEWEX_VERSION,40,10,76,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 by tsupo",
+                    IDC_STATIC,44,25,179,8
+    LTEXT           "http://watcher.moe-nifty.com/",IDC_ANEWEX_WEB_URL,48,38,
+                    104,8,SS_NOTIFY
+    DEFPUSHBUTTON   "OK",IDOK,173,7,50,14,WS_GROUP
+    LTEXT           "OpenSSL: ",IDC_OPENSSL,56,50,140,7
+    LTEXT           "iconv: ",IDC_ICONV,56,60,140,7
+END
+
+IDD_DIALOG_PROXYSETTING DIALOG DISCARDABLE  0, 0, 187, 167
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setting of proxy"
+FONT 10, "Times New Roman"
+BEGIN
+    LTEXT           "proxy server name (or IP address)",IDC_STATIC,7,7,121,8
+    EDITTEXT        IDC_EDIT_PROXYURL,7,17,173,15,ES_AUTOHSCROLL
+    LTEXT           "Port Number",IDC_STATIC,7,41,44,8
+    EDITTEXT        IDC_EDIT_PROXYPORT,7,51,173,15,ES_AUTOHSCROLL
+    LTEXT           "User name for proxy server (if necessary)",IDC_STATIC,7,
+                    75,126,8
+    EDITTEXT        IDC_EDIT_PROXYUSERNAME,7,85,173,15,ES_AUTOHSCROLL
+    LTEXT           "password for proxy server (if necessary)",IDC_STATIC,7,
+                    109,123,8
+    EDITTEXT        IDC_EDIT_PROXYPASSWORD,7,119,173,15,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,36,146,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,102,146,50,14
+END
+
+IDD_DIALOG_INPUT_PINGSITE DIALOG DISCARDABLE  0, 0, 245, 125
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add a Ping site"
+FONT 10, "Times New Roman"
+BEGIN
+    LTEXT           "Ping site URL",IDC_STATIC,7,7,45,8
+    EDITTEXT        IDC_EDIT_PINGSITE_URL,13,20,219,14,ES_AUTOHSCROLL
+    LTEXT           "Ping site name (for your memory)",IDC_STATIC,7,39,117,8
+    EDITTEXT        IDC_EDIT_PINGSITE_NAME,13,52,219,14,ES_AUTOHSCROLL
+    GROUPBOX        "Ping API type",IDC_STATIC,7,71,156,47,WS_GROUP
+    CONTROL         "weblogUpdates.ping (normally)",
+                    IDC_RADIO_PINGTYPE_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,22,84,120,10
+    CONTROL         "weblogUpdates.extendedPing",IDC_RADIO_PINGTYPE_EXTENDED,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,22,100,114,10
+    DEFPUSHBUTTON   "OK",IDOK,188,87,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,188,104,50,14
+END
+
+IDD_DIALOG_BLOGSETING DIALOG DISCARDABLE  0, 0, 279, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "your Blog information"
+FONT 10, "Times New Roman"
+BEGIN
+    LTEXT           "your Blog name",IDC_STATIC,7,7,49,8
+    EDITTEXT        IDC_EDIT_BLOGNAME,13,19,197,16,ES_AUTOHSCROLL
+    LTEXT           "your Blog URL",IDC_STATIC,7,41,47,8
+    EDITTEXT        IDC_EDIT_BLOGURL,13,53,197,16,ES_AUTOHSCROLL
+    LTEXT           "your Bolg's feed (RSS or Atom) URL",IDC_STATIC,7,75,103,
+                    8
+    EDITTEXT        IDC_EDIT_FEEDURL,13,87,197,16,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,222,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,222,24,50,14
+    PUSHBUTTON      "display your blog lists",IDC_BUTTON_BLOGLIST,222,85,50,
+                    19,BS_MULTILINE
+END
+
+IDD_DIALOG_BLOGLIST DIALOG DISCARDABLE  0, 0, 207, 167
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "list of your Blogs"
+FONT 10, "Times New Roman"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,151,7,49,16
+    PUSHBUTTON      "Cancel",IDCANCEL,151,24,49,16
+    LISTBOX         IDC_LIST_BLOGS,7,7,134,150,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_APPEND_BLOG,151,57,49,16
+    PUSHBUTTON      "Delete",IDC_DELETE_BLOG,151,74,49,16
+END
+
+IDD_ANEWEX_DIALOG DIALOGEX 0, 0, 259, 321
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "anewex - a tool for sending update pings"
+FONT 10, "Times New Roman", 0, 0, 0x1
+BEGIN
+    LTEXT           "Select a Blog",IDC_BLOG,7,7,40,8
+    COMBOBOX        IDC_COMBO,12,17,183,80,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "PING sites",IDC_PINGSITELIST,13,37,181,277
+    CONTROL         "http://rpc.weblogs.com/RPC2",IDC_RADIO_WEBLOGSCOM,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,19,47,105,10
+    CONTROL         "http://ping.bloggers.jp/rpc/",IDC_RADIO_BLOGGERSJP,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,19,59,99,10
+    CONTROL         "http://www.blogpeople.net/servlet/weblogUpdates",
+                    IDC_RADIO_BLOGPEOPLE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,19,71,171,10
+    CONTROL         "http://ping.rss.drecom.jp/",IDC_RADIO_MYBLOG,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,19,83,93,10
+    CONTROL         "http://rpc.technorati.com/rpc/ping",
+                    IDC_RADIO_TECHNORATI,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,19,95,127,10
+    CONTROL         "http://bulkfeeds.net/rpc",IDC_RADIO_BULKFEEDS,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,19,107,88,10
+    CONTROL         "http://blog.goo.ne.jp/XMLRPC",IDC_RADIO_GOO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,19,119,110,10
+    CONTROL         "http://blogsearch.google.com/ping/RPC2",
+                    IDC_RADIO_GOOGLE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    19,131,141,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_001,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,143,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_002,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,155,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_003,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,167,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_004,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,179,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_005,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,191,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_006,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,203,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_007,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,215,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_008,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,227,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_009,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,239,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_010,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,251,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_011,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,263,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_012,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,275,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_013,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,287,174,10
+    CONTROL         "(Unsetting)",IDC_RADIO_PINGSITE_014,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,19,299,174,10
+    PUSHBUTTON      "Add Ping site",IDC_ADD_PINGSITE,135,45,55,22
+    PUSHBUTTON      "send PINGs",IDC_PING,198,15,54,17
+    PUSHBUTTON      "Change setting",IDC_SETTING,199,42,53,17
+    PUSHBUTTON      "Version Info",IDC_VERSION,199,62,53,17
+    DEFPUSHBUTTON   "Finish",IDOK,199,82,53,17
+    CONTROL         "use proxy",IDC_CHECKPROXY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,199,279,53,10
+    PUSHBUTTON      "change proxy setting",IDC_BUTTONPROXY,199,293,53,21,
+                    BS_MULTILINE
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,3,12
+ PRODUCTVERSION 1,0,3,12
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Project ANEW\0"
+            VALUE "CompanyName", "Watching Balloon (KANSOKU-KIKYU) http://watcher.moe-nifty.com/\0"
+            VALUE "FileDescription", "anewex: one of tools for bloggers (sending update-pings)\0"
+            VALUE "FileVersion", "1, 0, 3, 12\0"
+            VALUE "InternalName", "anewex\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 by tsupo\0"
+            VALUE "LegalTrademarks", "Anew Not Equal WWIV\0"
+            VALUE "OriginalFilename", "anewex.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "anewex Application\0"
+            VALUE "ProductVersion", "1, 0, 3, 12\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_SENDING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 101
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 30
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_DIALOG_PROXYSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_DIALOG_INPUT_PINGSITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_DIALOG_BLOGSETING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_DIALOG_BLOGLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_ANEWEX_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 314
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "anewex Version Information (&A)..."
+    IDS_ANEWEX_WEB_URL      "http://watcher.moe-nifty.com/memo/2004/09/anewex.html"
+    IDS_EDIT_PING_SITE      "Edit a Ping site"
+    IDS_EDIT_BLOG_INFO      "Change Blog setting"
+    IDS_ADD_BLOG_INFO       "Add a Blog"
+    IDS_SENDING_PING        "Sending ping ..."
+    IDS_SENT_PING           "Sending Ping"
+    IDS_RECORDING_RESULT    "reflecting the transmission result ..."
+    IDS_RESULT              "Transmission result"
+    IDS_NO_PINGSITE         "No sites to be sent ping was found.     "
+    IDS_WRITE_FAILURE       "Initialization file - write error"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CREATE_FAILURE      "Initialization file creating failure.    "
+    IDS_UPDATE_FAILURE      "Initialization file updating failure.    "
+    IDS_USE_PROXY           "Does your PC communicate by way of the proxy server?    "
+    IDS_QUERY_PROXY         "Setting proxy"
+    IDS_SITENAME_001        "weblogs.com"
+    IDS_SITEURL_001         "http://rpc.weblogs.com/RPC2"
+    IDS_SITENAME_002        "ping.bloggers.jp"
+    IDS_SITEURL_002         "http://ping.bloggers.jp/rpc/"
+    IDS_SITENAME_003        "BlogPeople"
+    IDS_SITEURL_003         "http://www.blogpeople.net/servlet/weblogUpdates"
+    IDS_SITENAME_004        "Drecom RSS"
+    IDS_SITEURL_004         "http://ping.rss.drecom.jp/"
+    IDS_SITENAME_005        "technorati"
+    IDS_SITEURL_005         "http://rpc.technorati.com/rpc/ping"
+    IDS_SITENAME_006        "bulkfeeds"
+    IDS_SITEURL_006         "http://bulkfeeds.net/rpc"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SITENAME_007        "goo BLOG"
+    IDS_SITEURL_007         "http://blog.goo.ne.jp/XMLRPC"
+    IDS_SITENAME_008        "Google blog search"
+    IDS_SITEURL_008         "http://blogsearch.google.com/ping/RPC2"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ANEWEX_VERSION      "1.50"
+END
+
+#endif    // 英語 (ｱﾒﾘｶ) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\anewex.rc2"  // Microsoft Visual C++ 以外のツールで編集されたリソース
+#include "l.jpn\afxres.rc"          // 標準のコンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
